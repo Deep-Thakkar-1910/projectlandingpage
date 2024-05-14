@@ -75,7 +75,113 @@
   }
 }
 @layer utilities {
+  .border-image {
+    border-image-source: url("../public/Border1.png");
+    border-image-slice: 30 fill;
+    border-image-width: 10px;
+  }
   .border-schema {
     @apply border-b-2 border-black;
+  }
+  .text-shadow {
+    text-shadow: 2px 2px 4px black;
+  }
+}
+
+.neon-button {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 0 20px;
+  color: #715097;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+.neon-button:hover {
+  background: #7150977b;
+  color: #715097;
+  box-shadow:
+    0 0 5px #715097,
+    0 0 25px #715097,
+    0 0 50px #715097,
+    0 0 200px #715097;
+}
+.neon-button span {
+  position: absolute;
+  display: block;
+}
+.neon-button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: url("../public/Border1.png");
+  animation: animate1 2s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.neon-button span:nth-child(2) {
+  top: -100px;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: url("../public/Border1.png");
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.neon-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 8px;
+  background: url("../public/Border1.png");
+  animation: animate3 2s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+.neon-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: url("../public/Border1.png");
+  animation: animate4 2s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
   }
 }

@@ -40,26 +40,34 @@ const Navbar = ({
   return (
     <nav
       className={cn(
-        "fixed left-0 top-0 z-30 flex h-24 w-full items-center border-b-2 border-b-white px-4 font-semibold text-white lg:h-32",
+        "fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32",
         scrollOffset > 0
           ? "border-b-black bg-[#f2f2eb] text-black"
           : "bg-gradient-to-b from-sky-300 to-sky-200/80",
       )}
     >
-      <div className="relative w-40 lg:w-[350px]">
+      <div className="relative flex w-40 items-center lg:w-[350px]">
         <Image
-          src={"/TakaOriginal.png"}
-          alt="Logo"
+          src={"/Logo.png"}
+          alt="NanaHana Logo"
           width={500}
           height={500}
-          className="cursor-pointer"
+          className=" w-40 translate-y-[10%] cursor-pointer"
         />
+        <h1
+          className={cn(
+            "hidden text-4xl text-white lg:block",
+            scrollOffset > 0 && "text-black",
+          )}
+        >
+          NanaHana
+        </h1>
       </div>
 
-      <div className="ml-8 hidden items-center gap-x-4 tracking-wider lg:flex">
+      <div className="hidden items-center gap-x-4 tracking-wider lg:flex xl:-translate-x-1/4">
         <span className="cursor-pointer">NEW</span>
         <div
-          className="items center gap-x flex cursor-pointer"
+          className="gap-x flex cursor-pointer items-center"
           onClick={() => {
             setSearchClose();
             setCollectionClose();
@@ -71,7 +79,7 @@ const Navbar = ({
         </div>
 
         <div
-          className="items center gap-x flex cursor-pointer"
+          className="gap-x flex cursor-pointer items-center"
           onClick={() => {
             setSearchClose();
             setShopClose();
@@ -85,7 +93,7 @@ const Navbar = ({
         <span className="cursor-pointer">ABOUT</span>
       </div>
 
-      <div className="ml-auto flex items-center gap-4 font-normal">
+      <div className="flex items-center gap-4 font-normal">
         <div className="lg:hidden" onClick={setSidebarOpen}>
           <Menu className="size-8" />
         </div>

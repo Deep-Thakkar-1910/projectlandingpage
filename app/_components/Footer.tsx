@@ -23,14 +23,14 @@ const Footer = () => {
         </div>
       </div>
       {/* mid footer */}
-      <div className="border-schema flex w-full flex-col justify-between gap-y-4 bg-[#f2f2eb] p-2 px-4 lg:flex-row">
-        <div className="relative  w-32">
+      <div className="border-schema flex w-full flex-col items-center justify-between gap-y-4 bg-[#f2f2eb]  px-4 lg:flex-row">
+        <div className="relative">
           <Image
-            src={"/TakaOriginal.png"}
+            src={"/Logo.png"}
             width={300}
             height={300}
-            className="size-full object-contain"
-            alt="TakaOriginal Logo"
+            className="w-52 translate-y-[10%] object-contain"
+            alt="NanaHana Logo"
           />
         </div>
         <p className="text-base font-semibold ">
@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="flex-col gap-y-2 lg:w-1/3">
           <p>
             <span>&copy;</span>
-            2024, Taka Original Limited.
+            2024, NanaHana Limited.
           </p>
           <div className="flex w-1/2 flex-wrap items-center gap-x-1 text-xs lg:text-sm">
             <span>Powered By Shopify</span>

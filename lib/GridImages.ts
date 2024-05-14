@@ -55,20 +55,7 @@ export const GridImages: GridImageItem[] = [
     title: "Taka Original Monologuist - all the small things t-shirt",
     price: 40,
   },
-  {
-    productId: 8,
-    mainImageurl: "/GridMain.jpg",
-    altImageurl: "/GridAlt.jpg",
-    title: "Taka Original Monologuist - all the small things t-shirt",
-    price: 40,
-  },
-  {
-    productId: 9,
-    mainImageurl: "/GridMain.jpg",
-    altImageurl: "/GridAlt.jpg",
-    title: "Taka Original Monologuist - all the small things t-shirt",
-    price: 40,
-  },
+
   {
     productId: 10,
     mainImageurl: "/GridMain.jpg",
