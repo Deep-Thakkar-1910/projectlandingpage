@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <aside
       className={cn(
-        "fixed right-0 top-0 z-50 flex h-full w-1/3 translate-x-full flex-col border-2 border-t-0 border-black bg-[#61ff5c] transition-transform duration-300 ease-in-out",
+        "fixed right-0 top-0 z-50 flex h-full w-10/12 translate-x-full flex-col border-2 border-t-0 border-black bg-[#61ff5c] transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:1/3",
         isCartOpen && "translate-x-0",
       )}
     >
