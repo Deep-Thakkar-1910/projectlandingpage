@@ -46,7 +46,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
               alt={image.slice(1)}
               width={1920}
               height={1080}
-              className="size-full rounded-md transition-transform duration-500 ease-out"
+              className="size-full rounded-md object-cover transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(-${activeIndex * 100}%)`, // Sliding animation
               }}

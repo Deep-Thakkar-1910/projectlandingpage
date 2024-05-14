@@ -13,6 +13,7 @@ import BrandingSection from "../_components/BrandingSection";
 import Footer from "../_components/Footer";
 import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
+import { GridImages } from "@/lib/GridImages";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <MobileSidebar />
 
         {/* chatbot */}
-        <ChatBot />
+        {/* <ChatBot /> */}
 
         {/* Main Poster */}
         <section className="mt-24 size-full border-b-2 border-b-black lg:mt-32">
@@ -51,7 +52,7 @@ export default function Home() {
         <DescriptionSection />
 
         {/* featured collection section */}
-        <FeaturedCollectionSection />
+        <FeaturedCollectionSection data={GridImages} />
 
         {/* infinite carousel */}
         <InfiniteCarousel background="#61ff5c">
@@ -81,7 +82,7 @@ export default function Home() {
         </InfiniteCarousel>
 
         {/* featured collection 2 */}
-        <FeaturedCollectionSection />
+        <FeaturedCollectionSection data={GridImages} />
 
         {/* branding section */}
         <BrandingSection />

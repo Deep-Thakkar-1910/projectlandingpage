@@ -1,17 +1,19 @@
 import Image from "next/image";
-import { GridImages, GridImageItem } from "@/lib/GridImages";
+import { GridImageItem } from "@/lib/GridImages";
 import { ChevronRight } from "lucide-react";
-
-const FeaturedCollectionSection = () => {
+const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
     <section>
-      <div className="border-schema ">
-        <h2 className="p-2 px-4 text-2xl font-semibold lg:text-4xl">
+      <div className="border-schema flex items-center justify-between p-2 px-4 font-semibold">
+        <h2 className="text-base  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
+        <span className="cursor-pointer text-base  hover:text-blue-700 lg:text-xl">
+          View All <ChevronRight className="inline-block size-6" />
+        </span>
       </div>
       <div className="flex flex-wrap">
-        {GridImages.map((product) => {
+        {data.map((product) => {
           return (
             <FeaturedCollectionItem
               key={product.productId}
@@ -19,17 +21,7 @@ const FeaturedCollectionSection = () => {
             />
           );
         })}
-        <div className=" ml-4 flex w-fit flex-col items-center justify-end py-4">
-          <span className="cursor-pointer text-base font-semibold hover:text-blue-700 lg:text-xl">
-            View All <ChevronRight className="inline-block size-6" />
-          </span>
-        </div>
       </div>
-      {/* <div className="border-schema flex w-full justify-center border-t-2 p-2 px-4">
-        <span className="cursor-pointer text-base font-semibold hover:text-blue-700 lg:text-xl">
-          View All <ChevronRight className="inline-block size-6" />
-        </span>
-      </div> */}
     </section>
   );
 };
@@ -41,7 +33,7 @@ const FeaturedCollectionItem = ({
   gridImageItem,
 }: FeaturedCollectionItemProps) => {
   return (
-    <div className="w-1/2 lg:w-1/4">
+    <div className="w-1/2 md:w-1/3 lg:w-1/4">
       <div className=" group/main size-full">
         {/* image container */}
         <div className="group/image border-image relative h-64 cursor-pointer border-8 lg:h-96 ">
@@ -61,7 +53,7 @@ const FeaturedCollectionItem = ({
           />
         </div>
         <div className="border-image flex items-baseline justify-between border-2 border-l-0 p-4 ">
-          <h3 className="w-1/2 text-base font-semibold tracking-wide group-hover/main:text-blue-700">
+          <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-blue-700 sm:text-base">
             {gridImageItem.title}
           </h3>
           <p className="font-bold group-hover/main:text-blue-700">
