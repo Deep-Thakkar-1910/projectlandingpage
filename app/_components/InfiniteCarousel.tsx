@@ -7,7 +7,8 @@ const InfiniteCarousel = ({ children, background }: InfiniteCarouselProps) => {
     <div className="group flex overflow-hidden">
       <div className=" flex animate-loop-scroll  text-nowrap group-hover:paused">
         <div
-          className={`border-schema bg-[${background}] flex items-center gap-x-4 border-t-2 p-2 px-4 uppercase`}
+          className={`border-schema flex items-center gap-x-4 border-t-2  p-2 px-4 uppercase`}
+          style={{ backgroundColor: background }}
         >
           {children}
           {children}
@@ -15,7 +16,8 @@ const InfiniteCarousel = ({ children, background }: InfiniteCarouselProps) => {
       </div>
       <div className=" flex animate-loop-scroll  text-nowrap group-hover:paused">
         <div
-          className={`border-schema bg-[${background}] flex items-center gap-x-4 border-t-2 p-2 px-4 uppercase`}
+          className={`border-schema  flex items-center gap-x-4 border-t-2 p-2 px-4 uppercase`}
+          style={{ backgroundColor: background }}
         >
           {children}
           {children}
