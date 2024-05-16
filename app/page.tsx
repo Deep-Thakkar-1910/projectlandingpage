@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import NeonButton from "./_components/NeonButton";
 import { LandingPageVideos } from "@/lib/LandingPageVideos";
 import localFont from "next/font/local";
-const HeadingFont = localFont({ src: "../public/fonts/font.woff2" });
+const HeadingFont = localFont({ src: "../public/fonts/VerminVibes.ttf" });
 const LandingPage = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 

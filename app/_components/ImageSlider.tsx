@@ -29,7 +29,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
           " size-2 rounded-full",
           activeIndex === index
             ? "border border-transparent bg-black"
-            : "border border-black bg-[#f2f2eb]",
+            : "border border-black bg-transparent",
         )}
         onClick={() => handleDotClick(index)}
       ></span>

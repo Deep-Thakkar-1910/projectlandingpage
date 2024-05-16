@@ -42,8 +42,8 @@ const Navbar = ({
       className={cn(
         "fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32",
         scrollOffset > 0
-          ? "border-b-black bg-[#f2f2eb] text-black"
-          : "bg-gradient-to-b from-sky-300 to-sky-200/80",
+          ? "border-b-black bg-[#715097] text-black"
+          : "bg-gradient-to-br from-purple-700 to-[#715097]",
       )}
     >
       <div className="relative flex w-40 items-center lg:w-[350px]">

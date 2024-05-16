@@ -11,13 +11,13 @@ const MobileSidebar = () => {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col border-2  border-t-0 border-black bg-[#61ff5c] transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
+        "fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col border-2  border-t-0 border-black bg-[#715097] transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
         isSidebarOpen && "translate-x-0",
       )}
     >
-      <div className="relative h-16 w-full  border-b-2 border-b-black bg-[#f2f2eb] px-4">
+      <div className="relative h-16 w-full  border-b-2 border-b-black bg-black px-4">
         <X
-          className="absolute right-0 top-1/2 size-8 -translate-y-1/2 cursor-pointer"
+          className="absolute right-0 top-1/2 size-8 -translate-y-1/2 cursor-pointer text-white"
           onClick={setSidebarClose}
         />
       </div>

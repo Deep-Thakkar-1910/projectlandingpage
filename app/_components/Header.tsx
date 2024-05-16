@@ -47,15 +47,17 @@ const Header = () => {
       {isSearchOpen && (
         <div
           className={cn(
-            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 bg-[#f2f2eb] px-4 lg:top-32",
-            scrollOffset > 0 ? "border-b-black" : "border-b-white",
+            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 bg-[#715097] px-4 lg:top-32",
+            scrollOffset > 0
+              ? "border-b-black text-black"
+              : "border-b-white text-white",
           )}
         >
           <div className=" flex items-center gap-x-4 font-semibold">
             <Search />
             <input
               type="text"
-              className="border-none bg-transparent outline-none placeholder:text-base placeholder:text-black "
+              className={`border-none bg-transparent outline-none placeholder:text-base placeholder:text-${scrollOffset > 0 ? "black" : "white"} `}
               placeholder="Search"
             />
           </div>
@@ -72,7 +74,7 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full  items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "border-black bg-[#f2f2eb] text-black"
+              ? "border-black bg-[#715097] text-black"
               : "border-white bg-black text-white",
           )}
         >
@@ -85,7 +87,7 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "border-black bg-[#f2f2eb] text-black"
+              ? "border-black bg-[#715097] text-black"
               : "border-white bg-black text-white",
           )}
         >

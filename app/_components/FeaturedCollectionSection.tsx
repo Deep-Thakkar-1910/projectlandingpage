@@ -8,8 +8,8 @@ const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
         <h2 className="text-base  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
-        <span className="cursor-pointer text-base  hover:text-blue-700 lg:text-xl">
-          View All <ChevronRight className="inline-block size-6" />
+        <span className="cursor-pointer text-sm hover:text-white sm:translate-x-0 lg:text-xl">
+          View All <ChevronRight className="inline-block  size-6" />
         </span>
       </div>
       <div className="flex flex-wrap">
@@ -34,9 +34,9 @@ const FeaturedCollectionItem = ({
 }: FeaturedCollectionItemProps) => {
   return (
     <div className="w-1/2 md:w-1/3 lg:w-1/4">
-      <div className=" group/main size-full">
+      <div className=" group/main border-image size-full border-8">
         {/* image container */}
-        <div className="group/image border-image relative h-64 cursor-pointer border-8 lg:h-96 ">
+        <div className="group/image  relative h-64 cursor-pointer  lg:h-96 ">
           <Image
             src={gridImageItem.mainImageurl}
             alt={gridImageItem.title}
@@ -49,14 +49,14 @@ const FeaturedCollectionItem = ({
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className="border-image absolute inset-0 object-cover opacity-0 transition-opacity duration-150 group-hover/image:opacity-100"
+            className="absolute inset-0 object-cover opacity-0 transition-opacity duration-150 group-hover/image:opacity-100"
           />
         </div>
-        <div className="border-image flex items-baseline justify-between border-2 border-l-0 p-4 ">
-          <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-blue-700 sm:text-base">
+        <div className=" flex items-baseline justify-between border-t-2  border-black p-4 ">
+          <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
-          <p className="font-bold group-hover/main:text-blue-700">
+          <p className="font-bold group-hover/main:text-white">
             {gridImageItem.price}$
           </p>
         </div>

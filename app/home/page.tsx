@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Cart from "../_components/Cart";
-import ChatBot from "../_components/ChatBot";
+// import ChatBot from "../_components/ChatBot";
 import Header from "../_components/Header";
 import MobileSidebar from "../_components/MobileSidebar";
 import Overlay from "../_components/Overlay";
@@ -14,13 +14,15 @@ import Footer from "../_components/Footer";
 import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export default function Home() {
   return (
     <>
       {/* Header component */}
       <Header />
-      <main className="overflow-x-hidden bg-[#f2f2eb]">
+      <main className={`overflow-x-hidden bg-[#715097] ${inter.className}`}>
         {/* Overlay */}
         <Overlay />
 
