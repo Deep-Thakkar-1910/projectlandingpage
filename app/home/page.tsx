@@ -16,13 +16,14 @@ import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
-
 export default function Home() {
   return (
     <>
       {/* Header component */}
       <Header />
-      <main className={`overflow-x-hidden bg-[#715097] ${inter.className}`}>
+      <main
+        className={`bg-app-main text-glow overflow-x-hidden ${inter.className}`}
+      >
         {/* Overlay */}
         <Overlay />
 

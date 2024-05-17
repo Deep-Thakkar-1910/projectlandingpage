@@ -47,7 +47,7 @@ const Header = () => {
       {isSearchOpen && (
         <div
           className={cn(
-            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 bg-[#715097] px-4 lg:top-32",
+            "bg-app-main fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 px-4 lg:top-32",
             scrollOffset > 0
               ? "border-b-black text-black"
               : "border-b-white text-white",
@@ -74,7 +74,7 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full  items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "border-black bg-[#715097] text-black"
+              ? "bg-app-main border-black text-black"
               : "border-white bg-black text-white",
           )}
         >
@@ -87,7 +87,7 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "border-black bg-[#715097] text-black"
+              ? "bg-app-main border-black text-black"
               : "border-white bg-black text-white",
           )}
         >

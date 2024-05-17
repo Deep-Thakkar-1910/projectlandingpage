@@ -79,12 +79,17 @@
     border-image-source: url("../public/Border1.png");
     border-image-slice: 30 fill;
     border-image-width: 10px;
+    box-shadow: 2px 2px 8px #d7d1e9;
   }
   .border-schema {
     @apply border-b-2 border-black;
   }
   .text-shadow {
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px #d7d1e9;
+  }
+
+  .text-glow {
+    text-shadow: 1px 2px 6px #d9baff;
   }
 }
 

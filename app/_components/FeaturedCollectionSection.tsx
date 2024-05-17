@@ -12,7 +12,7 @@ const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
           View All <ChevronRight className="inline-block  size-6" />
         </span>
       </div>
-      <div className="flex flex-wrap">
+      <div className="grid w-full grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4">
         {data.map((product) => {
           return (
             <FeaturedCollectionItem
@@ -33,8 +33,8 @@ const FeaturedCollectionItem = ({
   gridImageItem,
 }: FeaturedCollectionItemProps) => {
   return (
-    <div className="w-1/2 md:w-1/3 lg:w-1/4">
-      <div className=" group/main border-image size-full border-8">
+    <div className=" min-h-fit rounded-md ">
+      <div className=" group/main  size-full ">
         {/* image container */}
         <div className="group/image  relative h-64 cursor-pointer  lg:h-96 ">
           <Image
@@ -42,17 +42,17 @@ const FeaturedCollectionItem = ({
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className=" border-black object-cover transition-opacity duration-150 group-hover/image:opacity-0"
+            className=" border-image border-8 object-cover transition-opacity duration-150 group-hover/image:opacity-0"
           />
           <Image
             src={gridImageItem.altImageurl}
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className="absolute inset-0 object-cover opacity-0 transition-opacity duration-150 group-hover/image:opacity-100"
+            className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-150 group-hover/image:opacity-100"
           />
         </div>
-        <div className=" flex items-baseline justify-between border-t-2  border-black p-4 ">
+        <div className=" flex items-baseline justify-between  p-4 ">
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
