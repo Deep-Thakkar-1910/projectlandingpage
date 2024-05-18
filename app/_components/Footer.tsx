@@ -8,7 +8,7 @@ const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 const Footer = () => {
   return (
     <footer
-      className={`w-full border-b-2 border-white bg-[#060417] text-white ${mainFont.className}`}
+      className={`w-full border-b-2 border-white bg-gradient-to-bl from-app-main to-app-secondary text-white ${mainFont.className}`}
     >
       {/* top footer */}
       <div className=" flex w-full flex-col justify-between gap-y-6 border-b-2 border-b-white  p-2  lg:flex-row  lg:items-center">

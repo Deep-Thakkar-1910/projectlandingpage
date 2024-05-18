@@ -1,6 +1,6 @@
 const DescriptionSection = () => {
   return (
-    <section className="to-app-secondary  flex flex-col border-b-2 border-black bg-gradient-to-r from-app-main ">
+    <section className="flex  flex-col border-b-2 border-black bg-gradient-to-br from-app-main to-app-secondary ">
       <div className="w-full border-b-2 border-black p-2 px-4">
         <h2 className="text-xl font-semibold lg:text-4xl">
           Taka Online Gallery X <br className="hidden lg:block" /> P.T

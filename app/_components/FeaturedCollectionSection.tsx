@@ -3,7 +3,7 @@ import { GridImageItem } from "@/lib/GridImages";
 import { ChevronRight } from "lucide-react";
 const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
-    <section className="to-app-secondary bg-gradient-to-l from-app-main">
+    <section className="bg-gradient-to-bl from-app-main to-app-secondary">
       <div className="border-schema flex items-center justify-between p-4  font-semibold">
         <h2 className="flex-1 text-balance text-sm  sm:text-2xl lg:text-4xl">
           Featured Collection
