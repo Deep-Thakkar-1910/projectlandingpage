@@ -18,10 +18,9 @@ const config = {
       },
     },
     extend: {
-      // main color 1 : 3c1e43
-      // main color 2 : 28193c
       colors: {
         "app-main": "#28193c",
+        "app-secondary": "#431e38",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

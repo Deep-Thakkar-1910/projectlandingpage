@@ -22,7 +22,7 @@ export default function Home() {
       {/* Header component */}
       <Header />
       <main
-        className={`text-glow overflow-x-hidden bg-app-main text-white ${mainFont.className}`}
+        className={`text-glow overflow-x-hidden text-white ${mainFont.className}`}
       >
         {/* Overlay */}
         <Overlay />

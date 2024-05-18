@@ -15,7 +15,7 @@ const CollectionGallerySection = ({
   collectionItems,
 }: CollectionGallerySectionProps) => {
   return (
-    <section className="border-schema h-fit p-2 text-3xl font-bold lg:text-7xl">
+    <section className="border-schema to-app-secondary h-fit bg-gradient-to-r from-app-main p-2 text-3xl font-bold lg:text-7xl">
       <ul className="mt-4 space-y-10">
         {collectionItems.map((item, index) => {
           return (

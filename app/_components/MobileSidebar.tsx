@@ -11,7 +11,7 @@ const MobileSidebar = () => {
   return (
     <aside
       className={cn(
-        "text-shadow-none fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col border-2  border-t-0 border-black bg-gradient-to-br from-purple-700 to-[#715097] transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
+        "text-shadow-none to-app-secondary fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col  border-2 border-t-0 border-black bg-gradient-to-tl from-app-main transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
         isSidebarOpen && "translate-x-0",
       )}
     >
@@ -53,7 +53,7 @@ const MobileSidebar = () => {
         <div className=" flex w-full items-center gap-x-4 font-semibold">
           <input
             type="text"
-            className=" w-3/4 border-b-2 border-b-black bg-transparent outline-none placeholder:text-base placeholder:text-black "
+            className=" w-3/4 border-b-2 border-b-white bg-transparent outline-none placeholder:text-base placeholder:text-white "
             placeholder="Search"
           />
           <Search />
@@ -61,11 +61,11 @@ const MobileSidebar = () => {
         <div className="flex items-center gap-x-4">
           <InstagramLogoIcon className="size-6" />
           <Image
-            src={"/tiktok-icon.svg"}
+            src={"/tiktok.png"}
             alt="Tiktok logo"
             width={24}
             height={24}
-            className="size-6"
+            className="size-6 "
             loading="eager"
           />
           <Mail className="size-6" />

@@ -43,7 +43,7 @@ const Navbar = ({
       className={cn(
         `fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className}`,
         scrollOffset > 0
-          ? " border-b-black bg-app-main "
+          ? " to-app-secondary border-b-black bg-gradient-to-tl from-app-main"
           : "bg-gradient-to-br from-purple-700 to-[#715097]",
       )}
     >
