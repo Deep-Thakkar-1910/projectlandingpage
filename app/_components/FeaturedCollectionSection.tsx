@@ -5,10 +5,10 @@ const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
     <section>
       <div className="border-schema flex items-center justify-between p-4  font-semibold">
-        <h2 className=" flex-1 text-base  sm:text-2xl lg:text-4xl">
+        <h2 className="flex-1 text-balance text-sm  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
-        <span className="cursor-pointer text-sm hover:text-white sm:translate-x-0 lg:text-xl">
+        <span className="cursor-pointer text-xs hover:text-white sm:translate-x-0 sm:text-base lg:text-xl">
           View All <ChevronRight className="inline-block  size-6" />
         </span>
       </div>

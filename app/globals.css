@@ -92,7 +92,11 @@
     @apply border-b-2 border-black;
   }
   .text-shadow {
-    text-shadow: 2px 2px 4px #d7d1e9;
+    text-shadow:
+      2px 2px 4px #d9baff,
+      -2px -2px 4px #d9baff,
+      -4px 0 6px #d9baff,
+      0 -4px 8px #d9baff;
   }
   .text-shadow-none {
     text-shadow: none;
@@ -112,6 +116,11 @@
   padding: 25px 30px;
   margin: 0 20px;
   color: #715097;
+  text-shadow:
+    2px 2px 4px #d9baff,
+    -2px -2px 4px #d9baff,
+    -4px 0 6px #d9baff,
+    0 -4px 8px #d9baff;
   font-size: 24px;
   text-decoration: none;
   text-transform: uppercase;
