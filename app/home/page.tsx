@@ -22,7 +22,7 @@ export default function Home() {
       {/* Header component */}
       <Header />
       <main
-        className={`text-glow overflow-x-hidden bg-app-main ${mainFont.className}`}
+        className={`text-glow overflow-x-hidden bg-app-main text-white ${mainFont.className}`}
       >
         {/* Overlay */}
         <Overlay />
@@ -58,7 +58,7 @@ export default function Home() {
         <FeaturedCollectionSection data={GridImages} />
 
         {/* infinite carousel */}
-        <InfiniteCarousel background="#61ff5c">
+        <InfiniteCarousel background="#61ff5c" textColor="#000">
           <span className="text-3xl font-semibold lg:text-5xl">
             Create The fun
           </span>
@@ -75,7 +75,7 @@ export default function Home() {
         <ImageSlider images={ImageSliderImages} />
 
         {/* InfiniteCarousel 2 */}
-        <InfiniteCarousel background="#f2f2eb">
+        <InfiniteCarousel background="#f2f2eb" textColor="#000">
           <h1 className="text-2xl font-bold lg:text-8xl">Do what you want</h1>
           <span className="text-2xl font-bold lg:text-6xl">-</span>
           <h1 className="text-2xl font-bold lg:text-8xl">

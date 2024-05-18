@@ -103,10 +103,9 @@
   }
   .text-glow {
     text-shadow:
-      2px 2px 2px #d9baff,
-      -2px -2px 4px #d9baff,
-      -4px 0 6px #d9baff,
-      0 -4px 8px #d9baff;
+      1px 1px 8px #d9baff,
+      -1px -1px 8px #d9baff;
+    inset: 1px 1px 4px #d9baff;
   }
 }
 

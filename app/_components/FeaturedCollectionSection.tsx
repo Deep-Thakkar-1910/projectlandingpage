@@ -57,9 +57,7 @@ const FeaturedCollectionItem = ({
             {gridImageItem.title}
           </h3>
           <p className="flex-1 font-bold group-hover/main:text-white">
-            {gridImageItem.price}
-            <span className="text-shadow-none">$</span>
-            {/*currency symbol here */}
+            {gridImageItem.price}${/*currency symbol here */}
           </p>
         </div>
       </div>

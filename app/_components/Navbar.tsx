@@ -43,7 +43,7 @@ const Navbar = ({
       className={cn(
         `fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className}`,
         scrollOffset > 0
-          ? "border-b-black bg-app-main text-black"
+          ? " border-b-black bg-app-main "
           : "bg-gradient-to-br from-purple-700 to-[#715097]",
       )}
     >
@@ -55,14 +55,7 @@ const Navbar = ({
           height={500}
           className=" w-40 translate-y-[10%] cursor-pointer"
         />
-        <h1
-          className={cn(
-            "hidden text-4xl text-white lg:block",
-            scrollOffset > 0 && "text-black",
-          )}
-        >
-          NanaHana
-        </h1>
+        <h1 className="hidden text-4xl text-white lg:block">NanaHana</h1>
       </div>
 
       <div className="hidden items-center gap-x-4 tracking-wider lg:flex xl:-translate-x-1/4">

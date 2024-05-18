@@ -47,10 +47,8 @@ const Header = () => {
       {isSearchOpen && (
         <div
           className={cn(
-            "bg-app-main fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 px-4 lg:top-32",
-            scrollOffset > 0
-              ? "border-b-black text-black"
-              : "border-b-white text-white",
+            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 bg-app-main px-4 text-white lg:top-32",
+            scrollOffset > 0 ? "border-b-black " : "border-b-white ",
           )}
         >
           <div className=" flex items-center gap-x-4 font-semibold">
@@ -74,8 +72,8 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full  items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "bg-app-main border-black text-black"
-              : "border-white bg-black text-white",
+              ? "border-black bg-app-main "
+              : "border-white bg-black ",
           )}
         >
           Shop
@@ -87,8 +85,8 @@ const Header = () => {
           className={cn(
             "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 px-4 lg:top-32",
             scrollOffset > 0
-              ? "bg-app-main border-black text-black"
-              : "border-white bg-black text-white",
+              ? "border-black bg-app-main "
+              : "border-white bg-black ",
           )}
         >
           Collection
