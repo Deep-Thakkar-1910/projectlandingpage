@@ -14,15 +14,15 @@ import Footer from "../_components/Footer";
 import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
+import localFont from "next/font/local";
+const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 export default function Home() {
   return (
     <>
       {/* Header component */}
       <Header />
       <main
-        className={`bg-app-main text-glow overflow-x-hidden ${inter.className}`}
+        className={`text-glow overflow-x-hidden bg-app-main ${mainFont.className}`}
       >
         {/* Overlay */}
         <Overlay />

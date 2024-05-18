@@ -4,7 +4,7 @@ interface InfiniteCarouselProps {
 }
 const InfiniteCarousel = ({ children, background }: InfiniteCarouselProps) => {
   return (
-    <div className="group flex overflow-hidden">
+    <div className="text-shadow-none group flex overflow-hidden">
       <div className=" flex animate-loop-scroll  text-nowrap group-hover:paused">
         <div
           className={`border-schema flex items-center gap-x-4 border-t-2  p-2 px-4 uppercase`}

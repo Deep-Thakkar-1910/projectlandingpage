@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
+import localFont from "next/font/local";
+const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 interface navbarProps {
   scrollOffset: number;
   isCollectionOpen: boolean;
@@ -40,9 +41,9 @@ const Navbar = ({
   return (
     <nav
       className={cn(
-        "fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32",
+        `fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className}`,
         scrollOffset > 0
-          ? "bg-app-main border-b-black text-black"
+          ? "border-b-black bg-app-main text-black"
           : "bg-gradient-to-br from-purple-700 to-[#715097]",
       )}
     >

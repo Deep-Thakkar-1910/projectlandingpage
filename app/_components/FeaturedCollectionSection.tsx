@@ -4,8 +4,8 @@ import { ChevronRight } from "lucide-react";
 const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
     <section>
-      <div className="border-schema flex items-center justify-between p-2 px-4 font-semibold">
-        <h2 className="text-base  sm:text-2xl lg:text-4xl">
+      <div className="border-schema flex items-center justify-between p-4  font-semibold">
+        <h2 className=" flex-1 text-base  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
         <span className="cursor-pointer text-sm hover:text-white sm:translate-x-0 lg:text-xl">
@@ -56,8 +56,10 @@ const FeaturedCollectionItem = ({
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
-          <p className="font-bold group-hover/main:text-white">
-            {gridImageItem.price}$
+          <p className="flex-1 font-bold group-hover/main:text-white">
+            {gridImageItem.price}
+            <span className="text-shadow-none">$</span>
+            {/*currency symbol here */}
           </p>
         </div>
       </div>

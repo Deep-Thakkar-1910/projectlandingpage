@@ -3,10 +3,12 @@ import { ChevronDown, Facebook, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
+import localFont from "next/font/local";
+const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 const Footer = () => {
   return (
     <footer
-      className={`w-full border-b-2 border-white bg-[#060417] text-white ${inter.className}`}
+      className={`w-full border-b-2 border-white bg-[#060417] text-white ${mainFont.className}`}
     >
       {/* top footer */}
       <div className=" flex w-full flex-col justify-between gap-y-6 border-b-2 border-b-white  p-2  lg:flex-row  lg:items-center">
@@ -50,9 +52,11 @@ const Footer = () => {
         </div>
       </div>
       {/* bottom footer */}
-      <div className="text base flex w-full flex-col items-center gap-y-8 p-2 px-4 font-semibold lg:flex-row lg:justify-between">
+      <div
+        className={`text base flex w-full flex-col items-center gap-y-8 p-2 px-4 font-semibold lg:flex-row lg:justify-between ${inter.className}`}
+      >
         <div className="flex flex-col items-center gap-y-4 lg:w-1/3 lg:items-start">
-          <p className="">
+          <p>
             <span>&copy;</span>
             2024, NanaHana Limited.
           </p>
