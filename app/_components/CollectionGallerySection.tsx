@@ -25,7 +25,7 @@ const CollectionGallerySection = ({
               </span>
               <sup className="peer-hover:text-white">{item.after}</sup>
               <span className="hidden lg:inline">
-                {index === collectionItems.length - 1 ? "" : "—"}
+                {index === collectionItems.length - 1 ? "" : " | "}
               </span>
               <div className="pointer-events-none fixed left-1/2 top-16 z-20 flex -translate-x-1/2 items-center  justify-center opacity-0 transition-opacity duration-300 ease-out peer-hover:opacity-100 lg:top-0">
                 <Image
