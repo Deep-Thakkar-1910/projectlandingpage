@@ -29,7 +29,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header className="flex flex-col">
+    <header className="flex-co flex text-white">
       <Navbar
         scrollOffset={scrollOffset}
         setCartOpen={setCartOpen}
@@ -47,15 +47,14 @@ const Header = () => {
       {isSearchOpen && (
         <div
           className={cn(
-            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 bg-app-main px-4 text-white lg:top-32",
-            scrollOffset > 0 ? "border-b-black " : "border-b-white ",
+            "fixed left-0 top-24 z-10 flex h-16 w-full items-center justify-between border-b-2 border-white bg-black px-4 text-white lg:top-32",
           )}
         >
           <div className=" flex items-center gap-x-4 font-semibold">
             <Search />
             <input
               type="text"
-              className={`border-none bg-transparent outline-none placeholder:text-base placeholder:text-${scrollOffset > 0 ? "black" : "white"} `}
+              className={`border-none bg-transparent outline-none placeholder:text-base placeholder:text-white `}
               placeholder="Search"
             />
           </div>
@@ -70,10 +69,7 @@ const Header = () => {
       {isShopOpen && (
         <div
           className={cn(
-            "fixed left-0 top-24  z-10 flex h-16 w-full  items-center border-b-2 px-4 lg:top-32",
-            scrollOffset > 0
-              ? "border-black bg-app-main "
-              : "border-white bg-black ",
+            "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 border-white bg-black px-4 lg:top-32",
           )}
         >
           Shop
@@ -83,10 +79,7 @@ const Header = () => {
       {isCollectionOpen && (
         <div
           className={cn(
-            "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 px-4 lg:top-32",
-            scrollOffset > 0
-              ? "border-black bg-app-main "
-              : "border-white bg-black ",
+            "fixed left-0 top-24  z-10 flex h-16 w-full items-center border-b-2 border-white bg-black px-4 lg:top-32",
           )}
         >
           Collection

@@ -15,14 +15,15 @@ import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
 import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
+import "./homePage.css";
+const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
 export default function Home() {
   return (
     <>
       {/* Header component */}
       <Header />
       <main
-        className={`text-glow overflow-x-hidden text-white ${mainFont.className}`}
+        className={`text-glow overflow-x-hidden bg-black text-white ${mainFont.className}`}
       >
         {/* Overlay */}
         <Overlay />
@@ -75,7 +76,11 @@ export default function Home() {
         <ImageSlider images={ImageSliderImages} />
 
         {/* InfiniteCarousel 2 */}
-        <InfiniteCarousel background="#f2f2eb" textColor="#000">
+        <InfiniteCarousel
+          background="#f2f2eb"
+          textColor="#000"
+          borderColor="#888"
+        >
           <h1 className="text-2xl font-bold lg:text-8xl">Do what you want</h1>
           <span className="text-2xl font-bold lg:text-6xl">-</span>
           <h1 className="text-2xl font-bold lg:text-8xl">

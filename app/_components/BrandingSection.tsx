@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BrandingSection = () => {
   return (
-    <section className="border-schema to-app-secondary flex max-h-96 w-full items-center  justify-center gap-x-6 border-b-4 border-t-2 bg-gradient-to-br from-app-main p-8">
+    <section className="border-schema flex max-h-96 w-full items-center justify-center  gap-x-6 border-b-4 border-t-2 bg-[#9718f6]  p-8">
       <div className="relative w-1/4">
         <Image
           src={"/VOGUE.png"}

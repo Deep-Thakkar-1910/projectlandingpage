@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { GridImageItem } from "@/lib/GridImages";
 import { ChevronRight } from "lucide-react";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
-    <section className="bg-gradient-to-bl from-app-main to-app-secondary">
-      <div className="border-schema flex items-center justify-between p-4  font-semibold">
+    <section className="glowy-bubbles-inverse">
+      <div className="border-schema  flex items-center justify-between p-4  font-semibold">
         <h2 className="flex-1 text-balance text-sm  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
@@ -12,7 +14,7 @@ const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
           View All <ChevronRight className="inline-block  size-6" />
         </span>
       </div>
-      <div className="grid w-full grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-2 gap-4 p-4 pt-10 md:grid-cols-3 lg:grid-cols-4">
         {data.map((product) => {
           return (
             <FeaturedCollectionItem
@@ -49,14 +51,16 @@ const FeaturedCollectionItem = ({
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-150 group-hover/image:opacity-100"
+            className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-300 group-hover/image:opacity-100"
           />
         </div>
         <div className=" flex items-baseline justify-between  p-4 ">
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
-          <p className="flex-1 font-bold group-hover/main:text-white">
+          <p
+            className={`flex-1 font-bold group-hover/main:text-white ${inter.className}`}
+          >
             {gridImageItem.price}${/*currency symbol here */}
           </p>
         </div>

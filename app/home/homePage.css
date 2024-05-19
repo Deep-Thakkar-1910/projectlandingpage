@@ -1,0 +1,96 @@
+/* for the top-right and bottom left glowy purple bubbles */
+.glowy-bubbles {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.glowy-bubbles::after,
+.glowy-bubbles::before {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  background: #9718f6;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(200px);
+}
+
+.glowy-bubbles::before {
+  bottom: -6rem;
+  left: -6rem;
+}
+.glowy-bubbles::after {
+  top: -6rem;
+  right: -6rem;
+}
+
+/* for the top-left and bottom-right glowy purple bubbles */
+.glowy-bubbles-inverse {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.glowy-bubbles-inverse::after,
+.glowy-bubbles-inverse::before {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  background: #9718f6;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(200px);
+}
+
+.glowy-bubbles-inverse::before {
+  top: -6rem;
+  left: -6rem;
+}
+.glowy-bubbles-inverse::after {
+  bottom: -6rem;
+  right: -6rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+  .glowy-bubbles::before,
+  .glowy-bubbles-inverse::after {
+    bottom: -10rem;
+    left: -10rem;
+  }
+  .glowy-bubbles::after,
+  .glowy-bubbles-inverse::before {
+    top: -10rem;
+    right: -10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glowy-bubbles::after,
+  .glowy-bubbles::before {
+    width: 25rem;
+    height: 25rem;
+  }
+  .glowy-bubbles::before,
+  .glowy-bubbles-inverse::after {
+    bottom: -4rem;
+    left: -4rem;
+  }
+  .glowy-bubbles::after,
+  .glowy-bubbles-inverse::before {
+    top: -4rem;
+    right: -4rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .glowy-bubbles::after,
+  .glowy-bubbles::before,
+  .glowy-bubbles-inverse::after,
+  .glowy-bubbles-inverse::before {
+    opacity: 0.6;
+  }
+}

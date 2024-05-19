@@ -10,7 +10,8 @@ import {
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
+const HeadingFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
+const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
 interface navbarProps {
   scrollOffset: number;
   isCollectionOpen: boolean;
@@ -43,7 +44,7 @@ const Navbar = ({
       className={cn(
         `fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className}`,
         scrollOffset > 0
-          ? " to-app-secondary border-b-black bg-gradient-to-tl from-app-main"
+          ? " black-blur"
           : "bg-gradient-to-br from-purple-700 to-[#715097]",
       )}
     >
@@ -55,7 +56,11 @@ const Navbar = ({
           height={500}
           className=" w-40 translate-y-[10%] cursor-pointer"
         />
-        <h1 className="hidden text-4xl text-white lg:block">NanaHana</h1>
+        <h1
+          className={`${HeadingFont.className} hidden text-4xl text-white lg:block`}
+        >
+          NanaHana
+        </h1>
       </div>
 
       <div className="hidden items-center gap-x-4 tracking-wider lg:flex xl:-translate-x-1/4">

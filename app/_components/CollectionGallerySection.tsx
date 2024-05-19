@@ -1,5 +1,6 @@
 import Image from "next/image";
-
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 interface CollectionItem {
   id: number;
   title: string;
@@ -15,7 +16,7 @@ const CollectionGallerySection = ({
   collectionItems,
 }: CollectionGallerySectionProps) => {
   return (
-    <section className="border-schema h-fit bg-gradient-to-br from-app-main to-app-secondary p-2 text-3xl font-bold lg:text-7xl">
+    <section className="border-schema glowy-bubbles h-fit p-2 text-3xl font-bold lg:text-7xl">
       <ul className="mt-4 space-y-10">
         {collectionItems.map((item, index) => {
           return (
@@ -23,7 +24,9 @@ const CollectionGallerySection = ({
               <span className="peer relative z-10 hover:text-white hover:underline">
                 {item.title}
               </span>
-              <sup className="peer-hover:text-white">{item.after}</sup>
+              <sup className={`${inter.className} peer-hover:text-white`}>
+                {item.after}
+              </sup>
               <span className="hidden lg:inline">
                 {index === collectionItems.length - 1 ? "" : " | "}
               </span>

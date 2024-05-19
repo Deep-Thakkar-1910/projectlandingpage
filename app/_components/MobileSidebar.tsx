@@ -11,7 +11,7 @@ const MobileSidebar = () => {
   return (
     <aside
       className={cn(
-        "text-shadow-none to-app-secondary fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col  border-2 border-t-0 border-black bg-gradient-to-tl from-app-main transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
+        "text-shadow-none  fixed left-0 top-0 z-50 flex h-full w-10/12 -translate-x-full flex-col  border-2 border-t-0 border-black bg-[#9718f6]  transition-transform duration-300 ease-in-out sm:w-2/3 md:w-2/5 lg:hidden",
         isSidebarOpen && "translate-x-0",
       )}
     >

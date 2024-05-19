@@ -4,21 +4,21 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
+const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
 const Footer = () => {
   return (
     <footer
-      className={`w-full border-b-2 border-white bg-gradient-to-bl from-app-main to-app-secondary text-white ${mainFont.className}`}
+      className={`glowy-bubbles w-full border-b-2 border-gray-400 bg-black text-white ${mainFont.className}`}
     >
       {/* top footer */}
-      <div className=" flex w-full flex-col justify-between gap-y-6 border-b-2 border-b-white  p-2  lg:flex-row  lg:items-center">
+      <div className=" flex w-full flex-col justify-between gap-y-6 border-b-2 border-b-gray-400  p-2  lg:flex-row  lg:items-center">
         <p className="font text-base font-medium lg:text-xl">
           {"Let's create the fun together! Subscribe to get in touch."}
         </p>
         <div className="flex flex-col gap-4 lg:flex-row">
           <input
             type="email"
-            className="border-0 border-b-2 border-white  bg-transparent text-base font-semibold  outline-none  placeholder:text-base placeholder:text-white"
+            className="border-0 border-b-2 border-gray-400  bg-transparent text-base font-semibold  outline-none  placeholder:text-base placeholder:text-white"
             placeholder="Email"
           />
           <div className="mb-4 w-fit border-b-2 lg:mb-0">
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
       {/* mid footer */}
-      <div className="flex w-full flex-col   items-center border-b-2 border-white px-4  pb-4  lg:flex-row lg:justify-between">
+      <div className="flex w-full flex-col   items-center border-b-2 border-gray-400 px-4  pb-4  lg:flex-row lg:justify-between">
         <div className="relative">
           <Image
             src={"/Logo.png"}
@@ -39,7 +39,9 @@ const Footer = () => {
             alt="NanaHana Logo"
           />
         </div>
-        <div className="flex flex-col items-center text-sm font-semibold ">
+        <div
+          className={`${inter.className} flex flex-col items-center text-sm font-semibold `}
+        >
           <h1 className="text-xl">Contact Us</h1>
           <span className=" cursor-pointer text-sky-500">
             YOUREMAIL@GMAIL.COM

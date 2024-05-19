@@ -1,13 +1,13 @@
 const DescriptionSection = () => {
   return (
-    <section className="flex  flex-col border-b-2 border-black bg-gradient-to-br from-app-main to-app-secondary ">
-      <div className="w-full border-b-2 border-black p-2 px-4">
+    <section className="glowy-bubbles relative flex flex-col border-b-2 border-gray-400">
+      <div className="w-full border-b-2 border-gray-400 p-2 px-4">
         <h2 className="text-xl font-semibold lg:text-4xl">
           Taka Online Gallery X <br className="hidden lg:block" /> P.T
         </h2>
       </div>
       <div className="flex flex-1 flex-col lg:flex-row">
-        <div className="w-full  border-black p-2 px-4 lg:w-3/4  lg:border-r-2 ">
+        <div className="w-full  border-gray-400 p-2 px-4 lg:w-3/4  lg:border-r-2 ">
           <h3 className="text-2xl font-semibold">Taka Online Gallery</h3>
           <div className="mt-4 flex flex-col gap-y-4 text-base font-extrabold leading-tight">
             <p>
@@ -43,7 +43,7 @@ const DescriptionSection = () => {
             <p>Create the fun!</p>
           </div>
         </div>
-        <div className="flex w-full  border-t-2 border-black p-2 px-4 lg:w-1/4 lg:items-center lg:border-t-0">
+        <div className="flex w-full  border-t-2 border-gray-400 p-2 px-4 lg:w-1/4 lg:items-center lg:border-t-0">
           {":)"}
         </div>
       </div>

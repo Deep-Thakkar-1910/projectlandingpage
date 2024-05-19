@@ -89,7 +89,8 @@
     }
   }
   .border-schema {
-    @apply border-b-2 border-black;
+    @apply border-b-2;
+    border-color: rgba(156, 163, 175, alpha);
   }
   .text-shadow {
     text-shadow:
@@ -105,6 +106,10 @@
     text-shadow:
       1px 1px 8px #d9baff,
       -1px -1px 8px #d9baff;
+  }
+  .black-blur {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
   }
 }
 
