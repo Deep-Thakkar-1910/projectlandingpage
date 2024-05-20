@@ -11,7 +11,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 const HeadingFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
-const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
+const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
 interface navbarProps {
   scrollOffset: number;
   isCollectionOpen: boolean;

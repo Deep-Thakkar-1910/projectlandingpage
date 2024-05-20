@@ -54,13 +54,13 @@ const FeaturedCollectionItem = ({
             className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-300 group-hover/image:opacity-100"
           />
         </div>
-        <div className=" flex items-baseline justify-between  p-4 ">
+        <div
+          className={`flex items-baseline justify-between  p-4 ${inter.className}`}
+        >
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
-          <p
-            className={`flex-1 font-bold group-hover/main:text-white ${inter.className}`}
-          >
+          <p className="flex-1 font-bold group-hover/main:text-white">
             {gridImageItem.price}${/*currency symbol here */}
           </p>
         </div>

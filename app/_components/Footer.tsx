@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
+const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
 const Footer = () => {
   return (
     <footer

@@ -15,8 +15,8 @@ import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
 import localFont from "next/font/local";
+const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
 import "./homePage.css";
-const mainFont = localFont({ src: "../../public/fonts/Gadems.otf" });
 export default function Home() {
   return (
     <>
