@@ -1,67 +1,48 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 interface ImageSliderProps {
   images: string[];
 }
 
 const ImageSlider = ({ images }: ImageSliderProps) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const handleDotClick = (index: number) => {
-    setActiveIndex(index);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    autoplay: true,
+    pauseOnHover: false,
+    autoplaySpeed: 3000,
+    afterChange: (index: number) => setCurrentSlide(index),
   };
-  const handleScrollButtonClick = (direction: "left" | "right") => {
-    // Scroll button click logic
-    if (direction === "left") {
-      setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    } else {
-      setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }
-  };
-  const renderDots = () => {
-    return images.map((_, index) => (
-      <span
-        key={index}
-        className={cn(
-          " size-2 rounded-full",
-          activeIndex === index
-            ? "border border-transparent bg-white"
-            : "border border-white bg-transparent",
-        )}
-        onClick={() => handleDotClick(index)}
-      ></span>
-    ));
-  };
+
   return (
-    <>
-      <div className="size-full overflow-hidden">
-        <div className="flex ">
-          {images.map((image, index) => (
+    <div className="glowy-bubbles relative mx-auto w-full">
+      <Slider {...settings}>
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className="relative z-10 flex h-40 items-center justify-center overflow-hidden md:h-56 lg:h-96"
+          >
             <Image
-              key={index}
-              src={image}
-              alt={image.slice(1)}
-              width={1920}
-              height={1080}
-              className="size-full rounded-md object-cover transition-transform duration-500 ease-out"
-              style={{
-                transform: `translateX(-${activeIndex * 100}%)`, // Sliding animation
-              }}
+              src={img}
+              alt={img.slice(1)}
+              fill
+              className="ml-2 max-h-full max-w-full cursor-pointer object-contain"
             />
-          ))}
-        </div>
-      </div>
-      <div className="flex items-center justify-between p-2 px-4">
-        <div className="flex items-center gap-x-2">{renderDots()}</div>
-        <div className="flex items-center gap-x-4">
-          <ChevronLeft onClick={() => handleScrollButtonClick("left")} />
-          <ChevronRight onClick={() => handleScrollButtonClick("right")} />
-        </div>
-      </div>
-    </>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { GridImageItem } from "@/lib/GridImages";
 import { ChevronRight } from "lucide-react";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"], weight: ["400"] });
+import { HeadingFont } from "@/lib/FontDefinitions";
 const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
     <section className="glowy-bubbles-inverse">
-      <div className="border-schema  flex items-center justify-between p-4  font-semibold">
+      <div
+        className={`${HeadingFont.className} border-schema  flex items-center justify-between p-4  font-semibold`}
+      >
         <h2 className="flex-1 text-balance text-sm  sm:text-2xl lg:text-4xl">
           Featured Collection
         </h2>
@@ -54,9 +55,7 @@ const FeaturedCollectionItem = ({
             className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-300 group-hover/image:opacity-100"
           />
         </div>
-        <div
-          className={`flex items-baseline justify-between  p-4 ${inter.className}`}
-        >
+        <div className={`flex items-baseline justify-between  p-4`}>
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>

@@ -4,16 +4,14 @@ import {
   Minus,
   Plus,
   Search,
-  ShoppingBag,
-  UserRound,
+  ShoppingCart,
+  UserCircle2,
 } from "lucide-react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 const HeadingFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
 interface navbarProps {
-  scrollOffset: number;
   isCollectionOpen: boolean;
   isShopOpen: boolean;
   setSearchOpen: () => void;
@@ -35,18 +33,12 @@ const Navbar = ({
   setSearchClose,
   setShopClose,
   setShopOpen,
-  scrollOffset,
   isCollectionOpen,
   isShopOpen,
 }: navbarProps) => {
   return (
     <nav
-      className={cn(
-        `fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className}`,
-        scrollOffset > 0
-          ? " black-blur"
-          : "bg-gradient-to-br from-purple-700 to-[#715097]",
-      )}
+      className={`fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className} black-blur`}
     >
       <div className="relative flex w-40 items-center lg:w-[350px]">
         <Image
@@ -96,7 +88,7 @@ const Navbar = ({
         <div className="lg:hidden" onClick={setSidebarOpen}>
           <Menu className="size-8" />
         </div>
-        <UserRound className="size-6 cursor-pointer md:size-7" />
+        <UserCircle2 className="size-6 cursor-pointer md:size-7" />
         <Search
           className="size-6 cursor-pointer md:size-7"
           onClick={() => {
@@ -105,7 +97,7 @@ const Navbar = ({
             setSearchOpen();
           }}
         />
-        <ShoppingBag
+        <ShoppingCart
           className="size-6 cursor-pointer md:size-7"
           onClick={setCartOpen}
         />

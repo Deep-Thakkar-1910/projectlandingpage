@@ -1,11 +1,8 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"], weight: ["400"] });
+import { HeadingFont } from "@/lib/FontDefinitions";
 interface CollectionItem {
   id: number;
   title: string;
   after: string;
-  image: string;
 }
 
 interface CollectionGallerySectionProps {
@@ -16,7 +13,9 @@ const CollectionGallerySection = ({
   collectionItems,
 }: CollectionGallerySectionProps) => {
   return (
-    <section className="border-schema glowy-bubbles h-fit p-2 text-3xl font-bold lg:text-7xl">
+    <section
+      className={`border-schema ${HeadingFont.className}  glowy-bubbles h-fit p-2 text-3xl font-bold lg:text-6xl`}
+    >
       <ul className="mt-4 space-y-10">
         {collectionItems.map((item, index) => {
           return (
@@ -24,21 +23,10 @@ const CollectionGallerySection = ({
               <span className="peer relative z-10 hover:text-white hover:underline">
                 {item.title}
               </span>
-              <sup className={`${inter.className} peer-hover:text-white`}>
-                {item.after}
-              </sup>
+              <sup className={`peer-hover:text-white`}>{item.after}</sup>
               <span className="hidden lg:inline">
                 {index === collectionItems.length - 1 ? "" : " | "}
               </span>
-              <div className="pointer-events-none fixed left-1/2 top-16 z-20 flex -translate-x-1/2 items-center  justify-center opacity-0 transition-opacity duration-300 ease-out peer-hover:opacity-100 lg:top-0">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={500}
-                  height={500}
-                  className=" hidden lg:block lg:size-2/3 "
-                />
-              </div>
             </li>
           );
         })}

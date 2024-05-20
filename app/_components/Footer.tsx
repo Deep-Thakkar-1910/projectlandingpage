@@ -1,14 +1,12 @@
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { ChevronDown, Facebook, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
-import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
+
+import { inter, HeadingFont } from "@/lib/FontDefinitions";
 const Footer = () => {
   return (
     <footer
-      className={`glowy-bubbles w-full border-b-2 border-gray-400 bg-black text-white ${mainFont.className}`}
+      className={`glowy-bubbles-footer w-full border-b-2 border-gray-400 bg-black text-white ${HeadingFont.className}`}
     >
       {/* top footer */}
       <div className=" flex w-full flex-col justify-between gap-y-6 border-b-2 border-b-gray-400  p-2  lg:flex-row  lg:items-center">
@@ -40,7 +38,7 @@ const Footer = () => {
           />
         </div>
         <div
-          className={`${inter.className} flex flex-col items-center text-sm font-semibold `}
+          className={`${inter.className} flex flex-col items-center text-sm font-semibold`}
         >
           <h1 className="text-xl">Contact Us</h1>
           <span className=" cursor-pointer text-sky-500">

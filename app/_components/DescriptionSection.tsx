@@ -1,12 +1,17 @@
+import { HeadingFont } from "@/lib/FontDefinitions";
 const DescriptionSection = () => {
   return (
-    <section className="glowy-bubbles relative flex flex-col border-b-2 border-gray-400">
+    <section
+      className={`glowy-bubbles-inverse relative flex flex-col border-b-2 border-gray-400`}
+    >
       <div className="w-full border-b-2 border-gray-400 p-2 px-4">
-        <h2 className="text-xl font-semibold lg:text-4xl">
+        <h2
+          className={`text-xl font-semibold lg:text-4xl ${HeadingFont.className}`}
+        >
           Taka Online Gallery X <br className="hidden lg:block" /> P.T
         </h2>
       </div>
-      <div className="flex flex-1 flex-col lg:flex-row">
+      <div className={`flex flex-1 flex-col lg:flex-row`}>
         <div className="w-full  border-gray-400 p-2 px-4 lg:w-3/4  lg:border-r-2 ">
           <h3 className="text-2xl font-semibold">Taka Online Gallery</h3>
           <div className="mt-4 flex flex-col gap-y-4 text-base font-extrabold leading-tight">

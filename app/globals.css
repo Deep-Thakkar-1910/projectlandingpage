@@ -80,12 +80,13 @@
     border-image-slice: 30 fill;
     border-image-width: 10px;
     box-shadow:
-      3px 3px 6px #d7d1e9,
-      -3px -3px 6px #d7d1e9;
+      1px 1px 10px #b06fff,
+      -1px -1px 10px #b06fff;
     &:hover {
       box-shadow:
-        2px 2px 10px #d7d1e9,
-        -2px -2px 10px #d7d1e9;
+        1px 1px 10px #b06fff,
+        -1px -1px 20px #b06fff,
+        1px 1px 30px #b06fff;
     }
   }
   .border-schema {
@@ -95,17 +96,15 @@
   .text-shadow {
     text-shadow:
       2px 2px 4px #d9baff,
-      -2px -2px 4px #d9baff,
-      -4px 0 6px #d9baff,
-      0 -4px 8px #d9baff;
+      -2px -2px 4px #d9baff;
   }
   .text-shadow-none {
     text-shadow: none;
   }
   .text-glow {
     text-shadow:
-      1px 1px 4px #d9baff,
-      -1px -1px 4px #d9baff;
+      1px 1px 3px #2b82d9,
+      -1px -1px 3px #2b82d9;
   }
   .black-blur {
     background: rgba(0, 0, 0, 0.7);

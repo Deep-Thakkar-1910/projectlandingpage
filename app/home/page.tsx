@@ -14,8 +14,7 @@ import Footer from "../_components/Footer";
 import CollectionGallerySection from "../_components/CollectionGallerySection";
 import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
-import localFont from "next/font/local";
-const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
+import { inter } from "@/lib/FontDefinitions";
 import "./homePage.css";
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
       {/* Header component */}
       <Header />
       <main
-        className={`text-glow overflow-x-hidden bg-black text-white ${mainFont.className}`}
+        className={`text-glow overflow-x-hidden bg-black text-white ${inter.className}`}
       >
         {/* Overlay */}
         <Overlay />
@@ -59,7 +58,7 @@ export default function Home() {
         <FeaturedCollectionSection data={GridImages} />
 
         {/* infinite carousel */}
-        <InfiniteCarousel background="#61ff5c" textColor="#000">
+        <InfiniteCarousel background="#2b82d9" textColor="#000">
           <span className="text-3xl font-semibold lg:text-5xl">
             Create The fun
           </span>
