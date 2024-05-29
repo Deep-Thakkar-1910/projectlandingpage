@@ -28,12 +28,12 @@ const Footer = () => {
       </div>
       {/* mid footer */}
       <div className="flex w-full flex-col   items-center border-b-2 border-gray-400 px-4  pb-4  lg:flex-row lg:justify-between">
-        <div className="relative">
+        <div className="relative py-4">
           <Image
-            src={"/Logo.png"}
+            src={"/Logos/moth.png"}
             width={300}
             height={300}
-            className="w-52 translate-y-[10%] object-contain"
+            className="w-40 object-contain"
             alt="NanaHana Logo"
           />
         </div>

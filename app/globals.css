@@ -76,17 +76,18 @@
 }
 @layer utilities {
   .border-image {
-    border-image-source: url("../public/Border1.png");
-    border-image-slice: 30 fill;
-    border-image-width: 10px;
+    border-image-source: url("../public/Border.png");
+    border-image-slice: 100 fill;
+    border-image-width: 30px;
+    border-radius: 30px 4px 20px 4px;
     box-shadow:
-      1px 1px 10px #b06fff,
-      -1px -1px 10px #b06fff;
+      1px 1px 10px #d9baff,
+      -1px -1px 10px #d9baff;
     &:hover {
       box-shadow:
-        1px 1px 10px #b06fff,
-        -1px -1px 20px #b06fff,
-        1px 1px 30px #b06fff;
+        1px 1px 10px #d9baff,
+        -1px -1px 20px #d9baff,
+        1px 1px 30px #d9baff;
     }
   }
   .border-schema {

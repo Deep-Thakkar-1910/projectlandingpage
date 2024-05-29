@@ -37,7 +37,7 @@ export default function Home() {
         {/* <ChatBot /> */}
 
         {/* Main Poster */}
-        <section className="mt-24 size-full border-b-2 border-b-black lg:mt-32">
+        <section className="size-full border-b-2 border-b-black">
           <Image
             src={"/TakaOriginalPoster.jpg"}
             alt="Main Poster"

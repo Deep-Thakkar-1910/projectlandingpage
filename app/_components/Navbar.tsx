@@ -42,20 +42,29 @@ const Navbar = ({
     >
       <div className="relative flex w-40 items-center lg:w-[350px]">
         <Image
-          src={"/Logo.png"}
+          src={"/Logos/NanaHanaLogo.png"}
           alt="NanaHana Logo"
           width={500}
           height={500}
-          className=" w-40 translate-y-[10%] cursor-pointer"
+          className="mr-4 hidden aspect-square w-24 cursor-pointer lg:block"
         />
-        <h1
-          className={`${HeadingFont.className} hidden text-4xl text-white lg:block`}
-        >
-          NanaHana
-        </h1>
+        <Image
+          src="/Logos/moth.png"
+          alt="Logo Text"
+          width={1920}
+          height={1080}
+          className="mr-4 size-20 lg:hidden"
+        />
+        <Image
+          src="/Logos/NanaHanaWhiteText.png"
+          alt="Logo Text"
+          width={1920}
+          height={1080}
+          className="hidden h-20 w-64 sm:block"
+        />
       </div>
 
-      <div className="hidden items-center gap-x-4 tracking-wider lg:flex xl:-translate-x-1/4">
+      <div className="hidden items-center gap-x-4 tracking-wider lg:flex ">
         <span className="cursor-pointer">NEW</span>
         <div
           className="gap-x flex cursor-pointer items-center"

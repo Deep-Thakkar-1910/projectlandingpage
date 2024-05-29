@@ -6,7 +6,7 @@ const FeaturedCollectionSection = ({ data }: { data: GridImageItem[] }) => {
   return (
     <section className="glowy-bubbles-inverse">
       <div
-        className={`${HeadingFont.className} border-schema  flex items-center justify-between p-4  font-semibold`}
+        className={`${HeadingFont.className} border-schema relative z-50 flex items-center justify-between p-4  font-semibold`}
       >
         <h2 className="flex-1 text-balance text-sm  sm:text-2xl lg:text-4xl">
           Featured Collection
@@ -45,14 +45,14 @@ const FeaturedCollectionItem = ({
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className=" border-image border-8 object-cover transition-opacity duration-150 group-hover/image:opacity-0"
+            className=" border-image border-8 object-cover mix-blend-color-burn transition-opacity duration-150 group-hover/image:opacity-0"
           />
           <Image
             src={gridImageItem.altImageurl}
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className="border-image absolute inset-0 border-8 object-cover opacity-0 transition-opacity duration-300 group-hover/image:opacity-100"
+            className="border-image absolute inset-0 border-8 object-cover opacity-0 mix-blend-color-burn transition-opacity duration-300 group-hover/image:opacity-100"
           />
         </div>
         <div className={`flex items-baseline justify-between  p-4`}>
