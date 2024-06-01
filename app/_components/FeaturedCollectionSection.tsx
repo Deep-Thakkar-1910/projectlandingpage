@@ -45,22 +45,24 @@ const FeaturedCollectionItem = ({
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className=" border-image border-8 object-cover mix-blend-color-burn transition-opacity duration-150 group-hover/image:opacity-0"
+            className=" border-image border-4 object-cover  transition-opacity duration-150 group-hover/image:opacity-0"
           />
           <Image
             src={gridImageItem.altImageurl}
             alt={gridImageItem.title}
             fill
             layout="fill"
-            className="border-image absolute inset-0 border-8 object-cover opacity-0 mix-blend-color-burn transition-opacity duration-300 group-hover/image:opacity-100"
+            className="border-image absolute inset-0 border-4 object-cover opacity-0  transition-opacity duration-300 group-hover/image:opacity-100"
           />
         </div>
-        <div className={`flex items-baseline justify-between  p-4`}>
+        <div className={`flex items-baseline justify-between gap-x-4  p-4`}>
           <h3 className="w-2/3 text-xs font-semibold tracking-wide group-hover/main:text-white sm:text-base">
             {gridImageItem.title}
           </h3>
           <p className="flex-1 font-bold group-hover/main:text-white">
-            {gridImageItem.price}${/*currency symbol here */}
+            {gridImageItem.price}
+            <span> &#8377;</span>
+            {/*currency symbol here */}
           </p>
         </div>
       </div>

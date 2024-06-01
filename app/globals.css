@@ -77,9 +77,9 @@
 @layer utilities {
   .border-image {
     border-image-source: url("../public/Border.png");
-    border-image-slice: 100 fill;
-    border-image-width: 30px;
-    border-radius: 30px 4px 20px 4px;
+    border-image-slice: 180 fill;
+    border-image-width: 40px;
+    border-radius: 25px 4px 15px 4px;
     box-shadow:
       1px 1px 10px #d9baff,
       -1px -1px 10px #d9baff;

@@ -8,15 +8,15 @@ const DescriptionSection = () => {
         <h2
           className={`text-xl font-semibold lg:text-4xl ${HeadingFont.className}`}
         >
-          Taka Online Gallery X <br className="hidden lg:block" /> P.T
+          NanaHana Online Gallery X
         </h2>
       </div>
       <div className={`flex flex-1 flex-col lg:flex-row`}>
         <div className="w-full  border-gray-400 p-2 px-4 lg:w-3/4  lg:border-r-2 ">
-          <h3 className="text-2xl font-semibold">Taka Online Gallery</h3>
+          <h3 className="text-2xl font-semibold">NanaHana Online Gallery</h3>
           <div className="mt-4 flex flex-col gap-y-4 text-base font-extrabold leading-tight">
             <p>
-              Taka Online Gallery is a project dedicated to discovering and
+              NanaHana Online Gallery is a project dedicated to discovering and
               supporting independent artists and creators.
             </p>
             <p>
@@ -24,9 +24,9 @@ const DescriptionSection = () => {
               freely.
             </p>
             <p>
-              At Taka, you will find a variety of artworks, including paintings,
-              photography, sculptures, and handicrafts, all created by
-              independent artists from around the world.
+              At NanaHana, you will find a variety of artworks, including
+              paintings, photography, sculptures, and handicrafts, all created
+              by independent artists from around the world.
             </p>
             <p>
               We strive to help artists sell their work to support their
@@ -41,8 +41,8 @@ const DescriptionSection = () => {
             </p>
             <p>
               Whether you{"'"}re an art enthusiast, collector, or simply looking
-              for unique gifts, Taka Online Gallery welcomes you to join us in
-              supporting independent artists and creating a better art world
+              for unique gifts, NanaHana Online Gallery welcomes you to join us
+              in supporting independent artists and creating a better art world
               together!
             </p>
             <p>Create the fun!</p>

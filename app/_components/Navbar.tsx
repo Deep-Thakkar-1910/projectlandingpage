@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import localFont from "next/font/local";
+import Link from "next/link";
 const HeadingFont = localFont({ src: "../../public/fonts/VeniteAdoremus.ttf" });
 const mainFont = localFont({ src: "../../public/fonts/Neuropol.otf" });
 interface navbarProps {
@@ -41,27 +42,15 @@ const Navbar = ({
       className={`fixed left-0 top-0 z-30 flex  h-24 w-full items-center justify-between border-b-2 border-b-white px-4 font-semibold text-white lg:h-32 ${mainFont.className} black-blur`}
     >
       <div className="relative flex w-40 items-center lg:w-[350px]">
-        <Image
-          src={"/Logos/NanaHanaLogo.png"}
-          alt="NanaHana Logo"
-          width={500}
-          height={500}
-          className="mr-4 hidden aspect-square w-24 cursor-pointer lg:block"
-        />
-        <Image
-          src="/Logos/moth.png"
-          alt="Logo Text"
-          width={1920}
-          height={1080}
-          className="mr-4 size-20 lg:hidden"
-        />
-        <Image
-          src="/Logos/NanaHanaWhiteText.png"
-          alt="Logo Text"
-          width={1920}
-          height={1080}
-          className="hidden h-20 w-64 sm:block"
-        />
+        <Link href={"/home"}>
+          <Image
+            src="/Logos/NanaHanaWhiteText.png"
+            alt="Logo Text"
+            width={1920}
+            height={1080}
+            sizes="(max-width: 639px) 50vw, 100vw"
+          />
+        </Link>
       </div>
 
       <div className="hidden items-center gap-x-4 tracking-wider lg:flex ">

@@ -16,6 +16,8 @@ import { CollectionGallery } from "@/lib/CollectionGallery";
 import { GridImages } from "@/lib/GridImages";
 import { inter } from "@/lib/FontDefinitions";
 import "./homePage.css";
+import EmailToggler from "../_components/EmailToggler";
+import EmailPopup from "../_components/EmailPopup";
 export default function Home() {
   return (
     <>
@@ -33,17 +35,17 @@ export default function Home() {
         {/* Sidebar Component */}
         <MobileSidebar />
 
-        {/* chatbot */}
-        {/* <ChatBot /> */}
+        <EmailToggler />
+        <EmailPopup />
 
         {/* Main Poster */}
-        <section className="size-full border-b-2 border-b-black">
+        <section className="h-[90vh] w-full border-b-2 border-b-black bg-white pt-20">
           <Image
-            src={"/TakaOriginalPoster.jpg"}
+            src={"/Logos/NanaHanaFooter.png"}
             alt="Main Poster"
             width={1920}
             height={1080}
-            className="size-full"
+            className="size-full object-scale-down sm:object-cover md:object-fill"
           />
         </section>
         {/* Image slider component */}

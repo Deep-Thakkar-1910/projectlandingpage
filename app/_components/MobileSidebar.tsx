@@ -42,7 +42,8 @@ const MobileSidebar = () => {
       </div>
       <div className="flex flex-col gap-4 p-4 font-medium">
         <p className="text-sm">
-          United States {"(USD $)"} <ChevronDown className="inline-block" />
+          India {"(INR) "}
+          <span>&#8377;</span> <ChevronDown className="inline-block" />
         </p>
 
         <div className="flex flex-col">

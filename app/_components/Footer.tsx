@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="flex w-full flex-col   items-center border-b-2 border-gray-400 px-4  pb-4  lg:flex-row lg:justify-between">
         <div className="relative py-4">
           <Image
-            src={"/Logos/moth.png"}
+            src={"/Logos/NanaHanaWhiteText.png"}
             width={300}
             height={300}
             className="w-40 object-contain"
@@ -77,12 +77,13 @@ const Footer = () => {
         </div>
         {/* icons */}
         <div className="flex items-center gap-x-6 lg:ml-auto lg:-translate-x-1/4 xl:-translate-x-full">
-          <InstagramLogoIcon className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:stroke-[#715097] hover:shadow-md" />
-          <TwitterLogoIcon className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:stroke-[#715097] hover:shadow-md" />
-          <Facebook className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:stroke-[#715097] hover:shadow-md" />
+          <InstagramLogoIcon className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:text-[#4e3ab2] hover:shadow-md" />
+          <TwitterLogoIcon className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:text-[#4e3ab2] hover:shadow-md" />
+          <Facebook className="size-6 transition-all duration-300 ease-out hover:scale-125 hover:text-[#4e3ab2] hover:shadow-md" />
         </div>
         <p className="w-fit p-2 lg:ml-auto">
-          United States {"(USD $)"}
+          India {"(INR) "}
+          <span>&#8377;</span>
           <ChevronDown className="inline-block" />
         </p>
       </div>
